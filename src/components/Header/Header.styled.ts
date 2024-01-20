@@ -6,7 +6,7 @@ export const HeaderStyled = styled.header`
   justify-content: center;
   padding: 20px 0;
 
-  background-color: ${p => p.theme.colors.bg.beige};
+  /* background-color: ${p => p.theme.colors.bg.beige}; */
 `;
 
 export const AppTitle = styled.span`
