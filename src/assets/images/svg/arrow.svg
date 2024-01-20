@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Layer_1" x="0" y="0"
+    style="enable-background:new 0 0 20.2 8.1" version="1.1" viewBox="0 0 20.2 8.1">
+    <style>
+        .st0 {
+            fill: none;
+            fill-opacity: 0;
+            stroke: #fff;
+            stroke-linecap: round;
+            stroke-linejoin: round
+        }
+    </style>
+    <g id="arrow-up-1--arrow-up-keyboard">
+        <path id="Vector" d="M.6 4h13" class="st0" />
+        <path id="Vector_2_1_" d="M10.1 7.5 13.6 4 10.1.5" class="st0" />
+        <path id="Vector_2_2_" d="M16.1 7.5 19.6 4 16.1.5"
+            style="opacity:.2;fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round" />
+        <path id="Vector_2_3_" d="M13.1 7.5 16.6 4 13.1.5"
+            style="opacity:.6;fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round" />
+    </g>
+</svg>
