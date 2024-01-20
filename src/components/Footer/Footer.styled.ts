@@ -23,7 +23,7 @@ export const FooterStyled = styled.footer`
   display: flex;
   justify-content: center;
   margin-top: auto;
-  padding: 20px;
+  padding: 20px 20px 15px;
 
   background-color: ${p => p.theme.colors.bg.white};
 `;
