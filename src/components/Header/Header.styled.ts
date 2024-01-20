@@ -10,7 +10,7 @@ export const HeaderStyled = styled.header`
 export const AppTitle = styled.span`
   margin-left: 17px;
 
-  font-weight: 600;
+  font-weight: ${p => p.theme.fontWeights.semiBold};
   font-size: 25px;
   text-transform: capitalize;
 
