@@ -9,8 +9,9 @@ const theme = {
       green: '#60d17a',
     },
     neutral: {
-      blacked: '#2c2f2b',
+      white: '#ffffff',
       gray: '#898989',
+      blacked: '#2c2f2b',
     },
     progress: {
       default: '#e2e2e2',
