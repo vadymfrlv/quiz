@@ -3,6 +3,7 @@ import { BREAKPOINTS } from 'constants/breakpoints';
 const theme = {
   colors: {
     bg: {
+      white: '#ffffff',
       beige: '#fcfaf9',
       purple: '#837de6',
       green: '#60d17a',
