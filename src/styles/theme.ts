@@ -1,7 +1,21 @@
 import { BREAKPOINTS } from 'constants/breakpoints';
 
 const theme = {
-  colors: {},
+  colors: {
+    bg: {
+      beige: '#fcfaf9',
+      purple: '#837de6',
+      green: '#60d17a',
+    },
+    neutral: {
+      blacked: '#2c2f2b',
+      gray: '#898989',
+    },
+    progress: {
+      default: '#e2e2e2',
+      filled: '#48cb71',
+    },
+  },
   fontWeights: {
     regular: 400,
     medium: 500,
