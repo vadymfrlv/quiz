@@ -18,4 +18,17 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../assets/images/background/small.jpg);
+
+  @media (min-width: 768px) {
+    background-image: url(../assets/images/background/medium.jpg);
+  }
+
+  @media (min-width: 1200px) {
+    background-image: url(../assets/images/background/large.jpg);
+  }
 }
