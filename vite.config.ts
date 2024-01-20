@@ -10,6 +10,7 @@ export default defineConfig({
       assets: '/src/assets',
       components: '/src/components',
       constants: '/src/constants',
+      mock: '/src/mock',
       styles: '/src/styles',
       types: '/src/types',
       utils: '/src/utils',
