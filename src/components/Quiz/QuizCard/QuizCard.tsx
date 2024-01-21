@@ -1,6 +1,6 @@
-import { QuizItemStyled, Image, Button, OptionDescr, ArrowIcon } from './QuizItem.styled';
+import { QuizCardStyled, Image, Button, OptionDescr, ArrowIcon } from './QuizCard.styled';
 
-interface QuizItemProps {
+interface QuizCardProps {
   image: string;
   description: string;
   isColumn: boolean | undefined;
@@ -8,11 +8,11 @@ interface QuizItemProps {
   onClick: () => void;
 }
 
-export const QuizItem = ({ image, description, isColumn, isBtn, onClick }: QuizItemProps) => {
+export const QuizCard = ({ image, description, isColumn, isBtn, onClick }: QuizCardProps) => {
   const checkIfMale = description === 'Male';
 
   return (
-    <QuizItemStyled $isColumn={isColumn} $isBtn={isBtn} onClick={isBtn ? undefined : onClick}>
+    <QuizCardStyled $isColumn={isColumn} $isBtn={isBtn} onClick={isBtn ? undefined : onClick}>
       <Image $isColumn={isColumn} src={image} width={50} alt={description} />
       {isBtn ? (
         <Button $isMale={checkIfMale} onClick={onClick}>
@@ -22,6 +22,6 @@ export const QuizItem = ({ image, description, isColumn, isBtn, onClick }: QuizI
       ) : (
         <OptionDescr $isColumn={isColumn}>{description}</OptionDescr>
       )}
-    </QuizItemStyled>
+    </QuizCardStyled>
   );
 };
