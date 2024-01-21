@@ -42,4 +42,10 @@ export const questions: Question[] = [
       { description: '3-5 times a week', image: '/quiz-images/activity/power.webp' },
     ],
   },
+  {
+    id: 5,
+    title: 'Enter your email to get your Personal Weight loss Plan!',
+    isColumn: true,
+    options: [],
+  },
 ];
