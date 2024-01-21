@@ -19,7 +19,8 @@ export const QuizTiming = styled.p<QuestionProps>`
 `;
 
 export const QuestionTitle = styled.h1`
-  margin-top: 15px;
+  max-width: 350px;
+  margin: 15px auto 0;
 
   font-weight: ${p => p.theme.fontWeights.bold};
   font-size: 30px;
@@ -27,7 +28,13 @@ export const QuestionTitle = styled.h1`
 
   color: ${p => p.theme.colors.neutral.blacked};
 
+  @media (min-width: ${p => p.theme.screens.tab}) {
+    max-width: 500px;
+    font-size: 35px;
+  }
+
   @media (min-width: ${p => p.theme.screens.note}) {
+    max-width: 850px;
     font-size: 60px;
   }
 `;
@@ -61,6 +68,6 @@ export const Options = styled.ul<QuestionProps>`
 
   @media (min-width: ${p => p.theme.screens.note}) {
     grid-template-columns: ${p => (p.$isColumn ? '1fr' : `repeat(${p.$optionsLength}, 1fr)`)};
-    margin-top: 60px;
+    margin-top: 55px;
   }
 `;

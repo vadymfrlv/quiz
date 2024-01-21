@@ -1,16 +1,20 @@
 import { useState } from 'react';
 
 import { questions } from 'mock/questions';
-import { QuizItem } from 'components/QuizItem/QuizItem';
+import { QuizCard } from 'components/Quiz/QuizCard/QuizCard';
 
 import { Options, QuizTiming, QuestionTitle, QuestionHint } from './Quiz.styled';
+import { QuizEnd } from 'components/Quiz/QuizEnd/QuizEnd';
+import { ProgressBar } from './ProgressBar/ProgressBar';
 
 export const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [progress, setProgress] = useState(10);
+  const [progress, setProgress] = useState(1);
+  const [isQuizFinished, setIsQuizFinished] = useState(false);
 
   const firstQuestion = currentQuestionIndex === 0;
   const currentQuestion = questions[currentQuestionIndex];
+  const lastQuestion = currentQuestionIndex === questions.length - 1;
   const { title, hint, isColumn, isBtn, options } = currentQuestion;
   const optionsLength = options.length;
 
@@ -19,29 +23,35 @@ export const Quiz = () => {
     if (nextQuestion < questions.length) {
       setCurrentQuestionIndex(nextQuestion);
       setProgress(prevProgress => prevProgress + 100 / questions.length);
-    } else {
-      // Тут можна обробити завершення квізу
     }
   };
 
   return (
     <>
+      <ProgressBar progress={progress} />
       <QuizTiming $isSowing={firstQuestion}>1-minute quiz</QuizTiming>
-      <QuestionTitle>{title}</QuestionTitle>
+
+      {!isQuizFinished && <QuestionTitle>{title}</QuestionTitle>}
+
       <QuestionHint $isSowing={firstQuestion}>{hint}</QuestionHint>
-      <div>
-        <Options $optionsLength={optionsLength} $isColumn={isColumn}>
-          {options.map((option, idx) => (
-            <QuizItem
-              key={idx}
-              isColumn={isColumn}
-              isBtn={isBtn}
-              onClick={handleOptionClick}
-              {...option}
-            />
-          ))}
-        </Options>
-      </div>
+      <Options $optionsLength={optionsLength} $isColumn={isColumn}>
+        {options.map((option, idx) => (
+          <QuizCard
+            key={idx}
+            isColumn={isColumn}
+            isBtn={isBtn}
+            onClick={handleOptionClick}
+            {...option}
+          />
+        ))}
+      </Options>
+      {lastQuestion && (
+        <QuizEnd
+          isQuizFinished={isQuizFinished}
+          setIsQuizFinished={setIsQuizFinished}
+          setProgress={setProgress}
+        />
+      )}
     </>
   );
 };
