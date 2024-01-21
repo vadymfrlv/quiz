@@ -1,4 +1,4 @@
-import Logo from 'assets/images/emoji/logo.webp';
+import Logo from 'assets/images/main/logo.webp';
 
 import { HeaderStyled, AppLogo, AppTitle } from './Header.styled';
 
