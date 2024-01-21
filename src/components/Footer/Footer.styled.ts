@@ -35,6 +35,11 @@ export const ContentWrapper = styled.div`
 
 export const PhysicalAddress = styled.span`
   ${sharedTextStyle}
+  width: 300px;
+
+  @media (min-width: ${p => p.theme.screens.tab}) {
+    width: 100%;
+  }
 `;
 
 export const Email = styled.a`
