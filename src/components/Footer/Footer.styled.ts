@@ -20,12 +20,16 @@ const sharedPaymentIconStyle = css`
 `;
 
 export const FooterStyled = styled.footer`
-  display: flex;
-  justify-content: center;
-  margin-top: auto;
-  padding: 20px 20px 15px;
+  display: none;
 
-  background-color: ${p => p.theme.colors.bg.white};
+  @media (min-width: ${p => p.theme.screens.note}) {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    padding: 20px 20px 15px;
+
+    background-color: ${p => p.theme.colors.bg.white};
+  }
 `;
 
 export const ContentWrapper = styled.div`
