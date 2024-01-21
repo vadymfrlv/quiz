@@ -1,9 +1,10 @@
 import { GeneralSharedLayout } from 'components/Layouts/GeneralSharedLayout/GeneralSharedLayout';
+import { Quiz } from 'components/Quiz/Quiz';
 
 function App() {
   return (
     <GeneralSharedLayout>
-      <h1>Ready to start</h1>
+      <Quiz />
     </GeneralSharedLayout>
   );
 }
