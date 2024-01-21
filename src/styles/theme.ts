@@ -4,6 +4,7 @@ const theme = {
   colors: {
     bg: {
       white: '#ffffff',
+      gray: '#EFEEFF',
       beige: '#fcfaf9',
       purple: '#837de6',
       green: '#60d17a',
@@ -16,6 +17,14 @@ const theme = {
     progress: {
       default: '#e2e2e2',
       filled: '#48cb71',
+      error: '#FF4D00B9',
+    },
+    border: {
+      green: '#60d17a',
+    },
+    hover: {
+      hPurple: '#433ae5',
+      hGreen: '#2BD954',
     },
   },
   fontWeights: {
